@@ -7,7 +7,7 @@ package jokenpo;
 
 /**
  *
- * @author 311100469
+ * @author Gustavo Siqueira
  */
 public class Jokenpo {
 
