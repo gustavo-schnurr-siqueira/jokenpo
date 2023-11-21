@@ -6,6 +6,7 @@
 package jokenpo;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,8 +26,9 @@ public class Main_window extends javax.swing.JFrame {
         ImageIcon MscisorsIcon = new ImageIcon("C:\\Users\\311100469\\Documents\\NetBeansProjects\\Jokenpo\\src\\jokenpo\\Icones\\machine_scisors.png");
         ImageIcon MpaperIcon = new ImageIcon("C:\\Users\\311100469\\Documents\\NetBeansProjects\\Jokenpo\\src\\jokenpo\\Icones\\machine_paper.png");
         
-        int player = 0;
+        int player = 5;
         int machine = 0;
+        int result = 9;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -42,41 +44,33 @@ public class Main_window extends javax.swing.JFrame {
         paperBut = new javax.swing.JButton();
         scisorsBut = new javax.swing.JButton();
         goBut = new javax.swing.JButton();
+        narratorLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("AardvarkBold", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("JO-KEN-PO!");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 23, -1, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(156, 156, 156))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 631, -1));
 
-        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         machineHandLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jokenpo/Icones/machine_hand_icon.png"))); // NOI18N
+        jPanel3.add(machineHandLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 82, -1, -1));
 
         playerHandLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jokenpo/Icones/player_hand_icon.png"))); // NOI18N
+        jPanel3.add(playerHandLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 82, -1, -1));
 
         rockBut.setFont(new java.awt.Font("AardvarkBold", 0, 24)); // NOI18N
         rockBut.setForeground(new java.awt.Color(51, 51, 51));
@@ -86,6 +80,7 @@ public class Main_window extends javax.swing.JFrame {
                 rockButActionPerformed(evt);
             }
         });
+        jPanel3.add(rockBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 264, 203, -1));
 
         paperBut.setFont(new java.awt.Font("AardvarkBold", 0, 24)); // NOI18N
         paperBut.setForeground(new java.awt.Color(51, 51, 51));
@@ -95,6 +90,7 @@ public class Main_window extends javax.swing.JFrame {
                 paperButActionPerformed(evt);
             }
         });
+        jPanel3.add(paperBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 264, 188, -1));
 
         scisorsBut.setFont(new java.awt.Font("AardvarkBold", 0, 24)); // NOI18N
         scisorsBut.setForeground(new java.awt.Color(51, 51, 51));
@@ -104,6 +100,7 @@ public class Main_window extends javax.swing.JFrame {
                 scisorsButActionPerformed(evt);
             }
         });
+        jPanel3.add(scisorsBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(423, 264, 200, -1));
 
         goBut.setFont(new java.awt.Font("AardvarkBold", 0, 48)); // NOI18N
         goBut.setForeground(new java.awt.Color(51, 51, 51));
@@ -113,67 +110,14 @@ public class Main_window extends javax.swing.JFrame {
                 goButActionPerformed(evt);
             }
         });
+        jPanel3.add(goBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 340, 254, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(playerHandLabel)
-                .addGap(18, 191, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scisorsBut, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(machineHandLabel))
-                .addContainerGap())
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rockBut, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(paperBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(218, 218, 218))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(goBut, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(183, 183, 183))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(playerHandLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(machineHandLabel, javax.swing.GroupLayout.Alignment.LEADING))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rockBut)
-                    .addComponent(paperBut)
-                    .addComponent(scisorsBut))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(goBut)
-                .addGap(29, 29, 29))
-        );
+        narratorLabel.setFont(new java.awt.Font("Accidental Presidency", 0, 18)); // NOI18N
+        narratorLabel.setForeground(new java.awt.Color(255, 255, 255));
+        narratorLabel.setText("Let's play!");
+        jPanel3.add(narratorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 48, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 123, 631, 439));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -191,33 +135,45 @@ public class Main_window extends javax.swing.JFrame {
 
     private void scisorsButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scisorsButActionPerformed
         playerHandLabel.setIcon(scisorsIcon);
-        player=3;
+        player=2;
     }//GEN-LAST:event_scisorsButActionPerformed
 
     private void paperButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paperButActionPerformed
         playerHandLabel.setIcon(paperIcon);
-        player=2;
+        player=1;
     }//GEN-LAST:event_paperButActionPerformed
 
     private void rockButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rockButActionPerformed
         playerHandLabel.setIcon(rockIcon);
-        player=1;
+        player=0;
     }//GEN-LAST:event_rockButActionPerformed
 
     private void goButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButActionPerformed
-        
-        int machine = (int) (java.lang.Math.random() * 3 + 1);
+    if (player!=5){
+        int machine = (int) (java.lang.Math.random() * 3 );
         System.out.println(machine);
         
-        if (machine==1){
+        if (machine==0){
             machineHandLabel.setIcon(MrockIcon);
-        }else if(machine==2){
+        }else if(machine==1){
             machineHandLabel.setIcon(MpaperIcon);
         }else{
             machineHandLabel.setIcon(MscisorsIcon);
         }
         
-        if(machine==1 && pl)
+       
+        
+        if (player == machine){
+            narratorLabel.setText("It's a draw!");
+        }else if((player == 0 && machine == 2) || (player == 1 && machine == 0) || (player == 2 && machine == 1)){
+            narratorLabel.setText("You win!");
+        }else{
+            narratorLabel.setText("You lose.");
+        }
+        
+    }else{
+        JOptionPane.showMessageDialog(null,"Select one of the options!");
+    }
         
     }//GEN-LAST:event_goButActionPerformed
 
@@ -263,6 +219,7 @@ public class Main_window extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel machineHandLabel;
+    private javax.swing.JLabel narratorLabel;
     private javax.swing.JButton paperBut;
     private javax.swing.JLabel playerHandLabel;
     private javax.swing.JButton rockBut;
