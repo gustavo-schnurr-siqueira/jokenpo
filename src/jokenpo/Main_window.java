@@ -161,7 +161,7 @@ public class Main_window extends javax.swing.JFrame {
             machineHandLabel.setIcon(MscisorsIcon);
         }
         
-       
+       //primeiro comentário
         
         if (player == machine){
             narratorLabel.setText("It's a draw!");
