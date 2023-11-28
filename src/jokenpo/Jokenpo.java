@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 
 public class Jokenpo {
 
-    
+    //all things pass into the night!
     public static void main(String[] args) {
         
         Main_window window = new Main_window();
