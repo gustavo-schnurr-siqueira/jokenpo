@@ -3,8 +3,9 @@ package jokenpo;
 import javax.swing.JFrame;
 
 public class Jokenpo {
-
-    //all things pass into the night!
+    
+//all things pass into the night!
+//goodbye horses. I'm flying over you
     public static void main(String[] args) {
         
         Main_window window = new Main_window();
