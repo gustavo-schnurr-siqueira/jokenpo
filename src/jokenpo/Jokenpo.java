@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 
 public class Jokenpo {
 
-    
+//goodbye horses. I'm flying over you    
     public static void main(String[] args) {
         
         Main_window window = new Main_window();
